@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*::after,
+*::before,
+* {
+  box-sizing: inherit;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  height: 4.5rem;
+  width: 100%;
+  background: linear-gradient(62deg, rgb(248, 104, 104), rgb(138, 19, 19));
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.659);
+}
+
+#navbar div {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin: auto 20px auto auto;
+}
+
+#navbar div div {
+  width: 120px;
+  margin: 0 0 0 30px;
+}
+#navbar div div:hover {
+  background-color: rgb(118, 74, 241);
+}
+
+#navbar div div a {
+  color: white;
+  margin: 20px auto 0 auto;
+  font-size: 1.5rem;
+  height: 100%;
+}
+
+#navbar div div:hover a {
+  text-shadow: 1px 1px 3px black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 0 0 0;
+  background: linear-gradient(35deg, rgb(128, 128, 128), rgb(17, 9, 9));
+}
+
+#welcome-section {
+  height: 100vh;
+  text-align: center;
+}
+
+#welcome-section h1 {
+  margin: 22rem 0 0 0;
+  font-size: 4rem;
+  color: white;
+  text-shadow: 1px 1px 7px black;
+}
+
+#welcome-section p {
+  margin: 1% 0 0 0;
+  font-size: 2rem;
+  color: rgb(243, 36, 36);
+  text-shadow: 1px 1px 3px black;
+}
+
+#projects {
+  text-align: center;
+  background: linear-gradient(35deg, #45567d, #10285f);
+}
+
+#projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 4%;
+  margin: 0 15%;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  color: white;
+  border-bottom: 2px solid white;
+  margin: 5% 34.5%;
+}
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px 0px black;
+}
+
+.project-tile img {
+  height: 24rem;
+}
+
+.project-tile p {
+  height: 4rem;
+  padding-top: 1.1rem;
+  background-color: rgb(48, 56, 65);
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+}
+
+.project-tile p span {
+  color: rgb(48, 56, 65);
+  font-weight: 900;
+  transition: color 0.3s ease-out;
+}
+
+.project-tile:hover p span {
+  color: rgb(255, 52, 52);
+}
+
+#projects button {
+  width: 12%;
+  min-width: 150px;
+  margin: 6rem auto 4rem auto;
+  font-size: 1.5rem;
+  height: 3rem;
+  background: rgb(48, 56, 65);
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 5px 0px black;
+}
+
+#projects button:hover {
+  background: linear-gradient(62deg, rgb(248, 104, 104), 10%, rgb(138, 19, 19));
+}
+
+#contact {
+  background-color: rgb(48, 56, 65);
+  height: 82vh;
+  border-bottom: 4px solid;
+  border-image: linear-gradient(
+      62deg,
+      rgb(248, 104, 104),
+      20%,
+      rgb(138, 19, 19)
+    )
+    1;
+  text-align: center;
+}
+
+#contact-header {
+  color: white;
+  margin: 15% 0 0 0;
+}
+
+#contact-header h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+#contact-header p {
+  font-size: 1.2rem;
+}
+
+#contact-link {
+  display: flex;
+  justify-content: center;
+  margin: 4% 0 0 0;
+  flex-wrap: wrap;
+}
+
+#contact-link a {
+  color: white;
+  font-size: 1.6rem;
+  margin: 0 0 0 50px;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  text-shadow: 2px 2px 5px black;
+  transition: transform 0.3s ease-out;
+}
+
+#contact-link a:hover {
+  transform: translateY(10px);
+}
+
+#contact-link a div {
+  margin-right: 5px;
+  padding: 1.5% 0 1.5% 0;
+}
+
+.contact-svg {
+  width: 25px;
+  filter: drop-shadow(2px 2px 5px black);
+}
+
+footer {
+  height: 11vh;
+  background-color: rgb(48, 56, 65);
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-size: 1.2rem;
+}
+
+#div-foot-1 {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto 0 auto 5%;
+  text-align: justify;
+}
+
+#div-foot-2 {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  margin: auto 0;
+}
+
+@media (max-width: 1536px) {
+  #div-foot-1 {
+    width: 80%;
+    margin: auto 0 auto 5%;
+  }
+
+  #div-foot-2 {
+    width: 20%;
+  }
+
+  #projects-grid {
+    margin: 0 5%;
+  }
+}
+
+@media (max-width: 1366px) {
+  #welcome-section {
+    height: 92vh;
+  }
+
+  #welcome-section h1 {
+    margin: 15rem 0 0 0;
+  }
+
+  #projects-grid {
+    margin: 0 2%;
+  }
+}
+
+@media (max-width: 1280px) {
+  #div-foot-1 {
+    width: 82%;
+    margin: auto 0 auto 4%;
+  }
+
+  #div-foot-2 {
+    width: 18%;
+}
+
+@media (max-width: 810px) {
+  #welcome-section {
+    height: 25vh;
+  }
+
+  #welcome-section h1 {
+    margin: 4rem 0 0 0;
+  }
+
+  #projects-grid {
+    gap: 4%;
+    margin: 0 8%;
+  }
+
+  .project-tile {
+    width: 20rem;
+  }
+
+  #projects h2 {
+    margin: 5% 14%;
+  }
+
+  .project-tile img {
+    height: auto;
+    width: 100%;
+  }
+  
+  .project-tile p {
+    font-size: 1.3rem;
+    word-wrap: break-word;
+  }
+
+  #projects button {
+    margin: 8rem auto 4rem auto;
+  }
+
+  #contact {
+    height: 40vh;
+  }
+
+  #contact-link {
+  margin: 6% 8% 0 0;
+  flex-wrap: wrap;
+}
+
+  #div-foot-1 {
+    width: 60%;
+  }
+
+  #div-foot-2 {
+    width: 20%;
+    margin: 4.6% 0 auto 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  #projects h2 {
+    margin: 5% 12%;
+  }
+
+  #projects-grid {
+    gap: 4%;
+    margin: 0 5%;
+  }
+
+  #contact {
+    height: 40vh;
+  }
+
+  #div-foot-1 {
+    width: 70%;
+  }
+
+  #div-foot-2 {
+    width: 30%;
+    margin: 4.5% 0 auto 5%;
+  }
+}
+
+@media (max-width: 414px) {
+  #navbar div {
+    margin: auto;
+  }
+  
+  #navbar div div {
+    margin: 0;
+  }
+  
+  #navbar div div a {
+    color: white;
+    margin: 20px auto 0 auto;
+    font-size: 1.5rem;
+    height: 100%;
+  }
+  
+  #navbar div div:hover a {
+    text-shadow: 1px 1px 3px black;
+  }
+
+  #welcome-section {
+    height: 100vh;
+  }
+
+  #welcome-section h1 {
+    margin: 20rem 0 0 0;
+    font-size: 3.5rem;
+  }
+
+  #projects h2 {
+    font-size: 1.8rem;
+  }
+
+  #projects-grid {
+    gap: 2%;
+    margin: 0 4%;
+  }
+
+  .project-tile {
+    width: 100%;
+  }
+
+  #projects button {
+    margin: 13rem auto 3rem auto;
+  }
+
+  #contact {
+    height: 72vh;
+  }
+
+  #contact-header {
+    margin: 0;
+    padding-top: 40%;
+  }
+  
+  #contact-header h2 {
+    font-size: 1.8rem;
+    font-weight: 900;
+  }
+  
+  #contact-header p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  #contact-link {
+  margin: 10% 0 0 0;
+  padding-right: 10%;
+  flex-wrap: wrap;
+  }
+
+  #contact-link a {
+    font-size: 1.2rem;
+    margin: 0 0 0 30px;
+    
+  }
+
+  .contact-svg {
+    width: 20px;
+  }
+
+  footer {
+    height: 20vh;
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+
+  #div-foot-1 {
+    width: 100%;
+    margin: 0;
+    padding: 0 10%;
+    font-size: 1rem;
+    padding-top: 10%;
+  }
+
+  #div-foot-2 {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding-top: 5%;
+  }
+  #div-foot-2 p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  #welcome-section {
+    height: 92vh;
+  }
+}
